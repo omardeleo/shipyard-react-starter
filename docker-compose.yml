@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+
+  react:
+    labels:
+      shipyard.route: '/'
+    build:
+      context: .
+    volumes:
+      - './src:/app/src'
+      - './public:/app/public'
+    ports:
+      - '3000:3000'
